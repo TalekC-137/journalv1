@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161616"
+    tools:context=".OnTheFly">
+
+    <ListView
+        android:id="@+id/lv_setsReps"
+        android:layout_width="402dp"
+        android:layout_height="559dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:outlineSpotShadowColor="#fff"
+        android:divider="#FFF"
+        android:dividerHeight="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Action_add_exe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lv_setsReps"
+        app:srcCompat="@drawable/add" />
+
+    <Button
+        android:id="@+id/btn_saveprogress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="1dp"
+        android:text="save to track your progress"
+        app:layout_constraintEnd_toStartOf="@+id/Action_add_exe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lv_setsReps" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dodawanie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:text="amount of weight"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_weight_num"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:text="number of reps"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_subtract_r"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_db"
+            android:background="#000"
+            android:textColor="#FFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="50dp"
+            android:text="your Exercise list"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reps_num" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="128dp"
+            android:text="cancel"
+            android:background="#000"
+            android:textColor="#FFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_subtract_r" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DF201F1F"></View>
+
+        <Button
+            android:id="@+id/btn_add_new"
+            android:layout_width="269dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="84dp"
+            android:layout_marginBottom="12dp"
+            android:background="#0C0C0C"
+            android:text="Add a new exercise to the list"
+            android:textColor="#FFFF"
+            app:layout_constraintBottom_toTopOf="@+id/actv"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <AutoCompleteTextView
+            android:id="@+id/actv"
+            android:layout_width="269dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="88dp"
+            android:layout_marginEnd="84dp"
+            android:completionThreshold="1"
+            android:hint="Select Exercise"
+            android:textColor="#FFF"
+            android:textColorHint="#8DFFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_add_w"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="236dp"
+            android:layout_marginTop="36dp"
+            android:background="#0C0C0C"
+            android:text="+"
+            android:textColor="#FFF"
+            android:textSize="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actv" />
+
+        <Button
+            android:id="@+id/btn_subtract_w"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="36dp"
+            android:background="#0C0C0C"
+            android:text="-"
+            android:textColor="#FFF"
+            android:textSize="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actv" />
+
+
+        <Button
+            android:id="@+id/btn_add_r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="236dp"
+            android:layout_marginTop="140dp"
+            android:background="#0C0C0C"
+            android:text="+"
+            android:textColor="#FFF"
+            android:textSize="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actv" />
+
+        <Button
+            android:id="@+id/btn_subtract_r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="140dp"
+            android:background="#0C0C0C"
+            android:text="-"
+            android:textColor="#FFF"
+            android:textSize="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actv" />
+
+        <TextView
+            android:id="@+id/tv_weight_num"
+            android:layout_width="0dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="36dp"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="40dp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_add_w"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toEndOf="@+id/btn_subtract_w"
+            app:layout_constraintTop_toBottomOf="@+id/actv" />
+
+        <TextView
+            android:id="@+id/tv_reps_num"
+            android:layout_width="0dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="140dp"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="40dp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_add_r"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toEndOf="@+id/btn_subtract_r"
+            app:layout_constraintTop_toBottomOf="@+id/actv" />
+
+        <Button
+            android:id="@+id/btn_poka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="84dp"
+            android:background="#000"
+            android:textColor="#FFF"
+            android:text="Add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_add_r" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

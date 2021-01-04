@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161616"
+    tools:context=".bmi">
+
+    <EditText
+        android:id="@+id/EditText_weight"
+        android:textColorHint="#80FFFFFF"
+        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="92dp"
+        android:ems="10"
+        android:hint="weight in kg"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextView_bmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFF"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="64dp"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditText_weight" />
+
+    <Button
+        android:id="@+id/btn_bmi_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="108dp"
+        android:background="#000000"
+        android:text="Button"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EditText_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:textColorHint="#80FFFFFF"
+        android:ems="10"
+        android:textColor="#FFFF"
+        android:hint="height in cm"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/EditText_weight"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/sw_ToImperial"
+        android:textColor="#FFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="16dp"
+        android:text="Switch to Imperial"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_ft"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="5dp"
+        android:ems="10"
+        android:visibility="gone"
+        android:textColorHint="#80FFFFFF"
+        android:textColor="#FFFF"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/EditText_weight"
+        app:layout_constraintTop_toBottomOf="@+id/sw_ToImperial" />
+    <EditText
+        android:id="@+id/et_inch"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:textColorHint="#80FFFFFF"
+        android:textColor="#FFFF"
+        android:inputType="numberDecimal"
+        android:visibility="gone"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toEndOf="@+id/et_ft"
+        app:layout_constraintTop_toBottomOf="@+id/sw_ToImperial" />
+
+    <ImageView
+        android:id="@+id/iv_bmi_lbs"
+        android:layout_width="match_parent"
+        android:layout_height="328dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bmi_lbs" />
+
+    <ImageView
+        android:id="@+id/iv_bmi_kg"
+        android:layout_width="match_parent"
+        android:layout_height="328dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/kg" />
+
+    <ImageView
+        android:id="@+id/iv_celownik"
+        android:layout_width="94dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/celownik" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

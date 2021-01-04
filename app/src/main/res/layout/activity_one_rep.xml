@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161616"
+    tools:context=".OneRep">
+
+    <Switch
+        android:id="@+id/switch_Imperial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#FFF"
+        android:textColorHint="#8DFFFFFF"
+        android:outlineSpotShadowColor="#2B2828"
+        android:background="@drawable/search"
+        android:text="Switch to Imperial"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/Selection_actv"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="#FFF"
+        android:textColorHint="#8DFFFFFF"
+        android:background="@drawable/search"
+        android:hint="Select exercise"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="311dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="48dp"
+        android:textColor="#FFF"
+        android:backgroundTint="#FFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Selection_actv" />
+
+    <FrameLayout
+        android:id="@+id/kalkulator"
+        android:layout_width="409dp"
+        android:layout_height="621dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:background="#161616"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner">
+
+        <EditText
+            android:id="@+id/ciezar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:textColor="#FFF"
+            android:textColorHint="#8DFFFFFF"
+            android:ems="10"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/reps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="50dp"
+            android:textColor="#FFF"
+            android:textColorHint="#8DFFFFFF"
+            android:ems="10"
+            android:hint="reps"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/rpm"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginLeft="64dp"
+            android:layout_marginTop="128dp"
+            android:text="Your 1 rep max is: "
+            android:textColor="#FFF"
+
+            android:textColorHint="#8DFFFFFF"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:text="Calculate"
+            android:textColor="#FFFFFF" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type of the exercise:"
+        android:textColor="#8DFFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="@+id/spinner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
